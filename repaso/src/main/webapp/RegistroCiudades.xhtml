@@ -6,22 +6,44 @@
 
 <h:head></h:head> 
 <body> 
-	<h1>Registro</h1>
+	<h1>Registro Ciudades</h1>
 	<h:form> 
 		<h:inputText id="codigo" value="#{vCiudades.ciudad.id}"></h:inputText>
 		
-		<h:inputText id="nombew" value="#{vCiudades.ciudad.nombre}"></h:inputText>
+		<h:inputText id="nombre" value="#{vCiudades.ciudad.nombre}"></h:inputText>
 		
 		<h:commandButton action="#{vCiudades.registrar()}" value="Registrar"></h:commandButton>
 	</h:form>
 	
-	<h1>Actualizacion</h1>
+	<h1>Actualizacion Ciudades</h1>
 	<h:form> 
 		<h:inputText id="codigo" value="#{vCiudades.ciudad.id}"></h:inputText>
 		
-		<h:inputText id="nombew" value="#{vCiudades.ciudad.nombre}"></h:inputText>
+		<h:inputText id="nombre" value="#{vCiudades.ciudad.nombre}"></h:inputText>
 		
 		<h:commandButton action="#{vCiudades.actualizar()}" value="Confirmar"></h:commandButton>
+	</h:form>
+	
+	<h1>Registro Personas</h1>
+	<h:form> 
+		<h:inputText id="cedula" value="#{personas.persona.cedula}"></h:inputText>
+		
+		<h:inputText id="nombre" value="#{personas.persona.nombre}"></h:inputText>
+		
+		<h:inputText id="ciudad" value="#{personas.persona.ciudad.id}"></h:inputText>
+		
+		<h:commandButton action="#{personas.registrarPersona()}" value="Registrar"></h:commandButton>
+	</h:form>
+	
+	<h1>Actualizacion Personas</h1>
+	<h:form> 
+		<h:inputText id="cedula" value="#{personas.persona.cedula}"></h:inputText>
+		
+		<h:inputText id="nombre" value="#{personas.persona.nombre}"></h:inputText>
+		
+		<h:inputText id="ciudad" value="#{personas.persona.ciudad.id}"></h:inputText>
+		
+		<h:commandButton action="#{personas.actualizarPersona()}" value="Confirmar"></h:commandButton>
 	</h:form>
 	
 	<h:form>

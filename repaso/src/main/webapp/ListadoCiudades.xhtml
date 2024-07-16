@@ -6,7 +6,7 @@
 
 <h:head></h:head> 
 <body> 
-	<h1> <strong>Ciudades</strong> </h1>
+	<h1> Ciudades </h1>
 	<h:dataTable value="#{vCiudades.ciudades}" var="ciudad">
 		<h:column>
 			<f:facet name="header"> Codigo </f:facet>
@@ -17,17 +17,40 @@
 			<f:facet name="header"> Nombre </f:facet>
 			#{ciudad.nombre}
 		</h:column>
-		
 	</h:dataTable>
-	
-	<h:form>
-		<h:commandButton action="#{vCiudades.regresar()}" value="Regresar"></h:commandButton>
-	</h:form>
 	
 	<h:form>
 		<h:inputText id="codigo" value="#{vCiudades.id}"></h:inputText>
 		
 		<h:commandButton action="#{vCiudades.elimnar()}" value="Eliminar"></h:commandButton>
+	</h:form>
+	
+	<h1> Personas </h1>
+	<h:dataTable value="#{personas.personas}" var="persona">
+		<h:column>
+			<f:facet name="header"> Cedula </f:facet>
+			#{persona.cedula}
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header"> Nombre </f:facet>
+			#{persona.nombre}
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header"> Ciudad </f:facet>
+			#{persona.ciudad}
+		</h:column>
+	</h:dataTable>
+	
+	<h:form>
+		<h:inputText id="cedula" value="#{personas.cedula}"></h:inputText>
+		
+		<h:commandButton action="#{personas.eliminarPersona()}" value="Eliminar"></h:commandButton>
+	</h:form>
+	
+		<h:form>
+		<h:commandButton action="#{vCiudades.regresar()}" value="Regresar"></h:commandButton>
 	</h:form>
 	
 </body> 
